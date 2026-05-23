@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Options - Nuestros Proyectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --verde-sage: #6A826E;
+            --verde-bosque: #0D301C;
+            --coral: #B4665F;
+            --arena: #E8E3D1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ebe9 100%);
+            color: var(--verde-bosque);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: var(--verde-bosque);
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .header p {
+            color: var(--verde-sage);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            color: var(--coral);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--verde-sage);
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .projects-section {
+            margin-top: 20px;
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            color: var(--verde-bosque);
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--verde-sage);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-left-color: var(--coral);
+        }
+
+        .project-number {
+            display: inline-block;
+            background: var(--verde-sage);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            color: var(--verde-bosque);
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .project-location {
+            color: var(--verde-sage);
+            font-size: 1em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .country-flag {
+            font-size: 1.3em;
+        }
+
+        .project-description {
+            color: var(--verde-bosque);
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: var(--arena);
+            color: var(--verde-bosque);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid var(--arena);
+        }
+
+        .footer p {
+            color: var(--verde-sage);
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: var(--coral);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header p {
+                font-size: 1.1em;
+            }
+
+            .stats {
+                gap: 25px;
+            }
+
+            .stat-number {
+                font-size: 2.5em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌍 Nuestros Proyectos</h1>
+            <p>Impacto real en Centroamérica</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Países</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Áreas de Trabajo</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Proyectos -->
+        <div class="projects-section">
+            <h2>Detalle de Proyectos</h2>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-number">1</div>
+                    <h3>Gestión de Residuos Sólidos</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇬🇹</span>
+                        Cuenca del Motagua, Guatemala
+                    </div>
+                    <p class="project-description">
+                        Implementación de sistemas eficientes para el manejo y tratamiento de residuos sólidos en la cuenca del río Motagua.
+                    </p>
+                    <span class="project-category">Gestión de Reciclaje</span>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-number">2</div>
+                    <h3>Restauración de Bosques</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇸🇻</span>
+                        Chalatenango, El Salvador
+                    </div>
+                    <p class="project-description">
+                        Programa de reforestación y recuperación de ecosistemas forestales degradados en la región de Chalatenango.
+                    </p>
+                    <span class="project-category">Restauración</span>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-number">3</div>
+                    <h3>Desplazamiento y Cambio Climático</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇭🇳</span>
+                        Honduras
+                    </div>
+                    <p class="project-description">
+                        Estudio y gestión de la movilidad humana causada por eventos climáticos extremos en Honduras.
+                    </p>
+                    <span class="project-category">Movilidad Humana</span>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div class="project-number">4</div>
+                    <h3>Diagnóstico de Conflictividad Minera</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇭🇳</span>
+                        Choluteca, Honduras
+                    </div>
+                    <p class="project-description">
+                        Análisis de conflictividad por actividades mineras con enfoque de género en Choluteca.
+                    </p>
+                    <span class="project-category">Gobernanza</span>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <div class="project-number">5</div>
+                    <h3>Diagnóstico de Conflictividad Minera</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇭🇳</span>
+                        Santa Bárbara, Honduras
+                    </div>
+                    <p class="project-description">
+                        Análisis de conflictividad por actividades mineras con enfoque de género en Santa Bárbara.
+                    </p>
+                    <span class="project-category">Gobernanza</span>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="project-card">
+                    <div class="project-number">6</div>
+                    <h3>Diagnóstico de Conflictividad Minera</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇭🇳</span>
+                        El Paraíso, Honduras
+                    </div>
+                    <p class="project-description">
+                        Análisis de conflictividad por actividades mineras con enfoque de género en El Paraíso.
+                    </p>
+                    <span class="project-category">Gobernanza</span>
+                </div>
+
+                <!-- Proyecto 7 -->
+                <div class="project-card">
+                    <div class="project-number">7</div>
+                    <h3>Diagnóstico de Conflictividad Minera</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇭🇳</span>
+                        Olancho, Honduras
+                    </div>
+                    <p class="project-description">
+                        Análisis de conflictividad por actividades mineras con enfoque de género en Olancho.
+                    </p>
+                    <span class="project-category">Gobernanza</span>
+                </div>
+
+                <!-- Proyecto 8 -->
+                <div class="project-card">
+                    <div class="project-number">8</div>
+                    <h3>Diagnóstico de Conflictividad Minera</h3>
+                    <div class="project-location">
+                        <span class="country-flag">🇭🇳</span>
+                        Colón, Honduras
+                    </div>
+                    <p class="project-description">
+                        Análisis de conflictividad por actividades mineras con enfoque de género en Colón.
+                    </p>
+                    <span class="project-category">Gobernanza</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>🌱 Climate Options</p>
+            <p><a href="mailto:climateoptions.co2@gmail.com">climateoptions.co2@gmail.com</a></p>
+            <p style="margin-top: 20px; font-size: 0.9em;">Soluciones climáticas para América Latina y el Caribe</p>
+        </div>
+    </div>
+</body>
+</html>
